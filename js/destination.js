@@ -1,10 +1,43 @@
-console.log("This working?")
+console.log("destination.js working?")
 
-function destinationMaker(name, image){
-    return{
-        name: name,
-        image: image
+class Destination{
+
+
+    static all = []
+
+
+    //  This is What We Use When We Do:   { * } = new Destination({*})
+    constructor({id, name, image, }){
+    // constructor({name, image, }){
+        //  With Destructuring 
+        //  * * * *  ATTRIBUTES SHOULD BE PASSED IN THE SAME ORDER AS IN JSON DATA/TABLE/ECT--
+                //   ***  Show Without Passing in a Whole Object  ***
+                    //    Without Destructuring 
+                    ////  constructor(name, image, ){
+
+            this.id = id
+        this.name = name,
+        this.image = image
+
+        Destination.all.push(this)
+        //  Destination.all[]  <<  this  ~  @Destination
+
     }
-}
 
-const chris = destinationMaker("Chris", "https://ca.slack-edge.com/T02MD9XTF-U01CA1HPEA1-g30a7a74eced-512")
+// Destination.all = []
+// //Contructor - HoverOver
+// function Destination(name, image){
+    
+//         this.name = name
+//         this.image = image
+
+//     Destination.all.push(this)
+// }
+
+// const NewYork = new Destination("New York", "https://ca.slack-edge.com/T02MD9XTF-U01CA1HPEA1-g30a7a74eced-512")
+// // function destinationMaker(name, image){
+// //     return{
+// //         name: name,
+// //         image: image
+// //     }
+// // }
