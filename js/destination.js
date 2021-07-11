@@ -7,7 +7,7 @@ class Destination{
 
 
     //  This is What We Use When We Do:   { * } = new Destination({*})
-    constructor({id, name, image, }){
+    constructor({id, name, image }){
     // constructor({name, image, }){
         //  With Destructuring 
         //  * * * *  ATTRIBUTES SHOULD BE PASSED IN THE SAME ORDER AS IN JSON DATA/TABLE/ECT--
