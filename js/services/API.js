@@ -1,3 +1,4 @@
+console.log("API.js working?")
 class API {
     static API_DESTINATION_TABLE_URL = "http://127.0.0.1:3000/destinations" //static is class level declaration
     static fetchAllOurDestinations(){
