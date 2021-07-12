@@ -35,6 +35,9 @@ class Destination{
         cardDiv.setAttribute("data-id", destination.id)
         cardDiv.id = destination.id
         cardDiv.innerHTML = this.makeACard()
+
+        const collectionDiv = document.querySelector("#destination-collection")
+        collectionDiv.append(cardDiv)
     }
 // Destination.all = []
 // //Contructor - HoverOver

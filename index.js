@@ -22,7 +22,9 @@ buttonToShowUsTheForm.addEventListener("click", () => {
     }
     });
 
-fetch(API_DATABASE_URL).then(response => response.json())
-.then(fetchedArray => {console.log(fetchedArray);
-    renderAllDestinations(fetchedArray)
-})
+// fetch(API_DATABASE_URL).then(response => response.json())
+// .then(fetchedArray => {console.log(fetchedArray);
+//     renderAllDestinations(fetchedArray)
+// })
+
+API.fetchAllOurDestinations()
