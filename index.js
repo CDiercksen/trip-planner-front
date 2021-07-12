@@ -13,18 +13,18 @@ const destinationFormContainer = document.querySelector(".container");
 //debug below
 const buttonToShowUsTheForm = document.querySelector("#new-destination-btn");
 
-buttonToShowUsTheForm.addEventListener("click", () => {
-    showTheForm = !showTheForm;
-    if (showTheForm) {
-        destinationFormContainer.style.display = "block";
-    } else {
-        destinationFormContainer.style.display = "none";
-    }
-    });
+// buttonToShowUsTheForm.addEventListener("click", () => {
+//     showTheForm = !showTheForm;
+//     if (showTheForm) {
+//         destinationFormContainer.style.display = "block";
+//     } else {
+//         destinationFormContainer.style.display = "none";
+//     }
+//     });
 
-// fetch(API_DATABASE_URL).then(response => response.json())
+// fetch(API_DATABASE_URL).then(response => response.json()) //fetch works using this method
 // .then(fetchedArray => {console.log(fetchedArray);
 //     renderAllDestinations(fetchedArray)
 // })
 
-API.fetchAllOurDestinations()
+API.fetchAllOurDestinations() // debug reference error API is not defined

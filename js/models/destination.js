@@ -22,6 +22,7 @@ class Destination{
         //  Destination.all[]  <<  this  ~  @Destination
 
     }
+    
     makeACard =()=>{console.log(this)
         return `
         <h2 id="coolbean" data-id="${this.id}">${this.name}</h2>
