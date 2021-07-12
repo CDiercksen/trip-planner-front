@@ -14,7 +14,7 @@ class Destination{
                     //    Without Destructuring 
                    
 
-            this.id = id
+            this.id = id,
         this.name = name,
         this.image = image
 
