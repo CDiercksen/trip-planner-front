@@ -6,7 +6,6 @@ class Destination{
     static all = []
 
 
-    //  This is What We Use When We Do:   { * } = new Destination({*})
     constructor({id, name, image }){
     // constructor({name, image, }){
         //  With Destructuring 
@@ -23,7 +22,20 @@ class Destination{
         //  Destination.all[]  <<  this  ~  @Destination
 
     }
+    makeACard =()=>{console.log(this)
+        return `
+        <h2 id="coolbean" data-id="${this.id}">${this.name}</h2>
+        <img src=${this.image} class="destination-icon" />
+        `
+    }
 
+    renderDestination =(destination)=> {
+        const cardDiv = document.createElement("div")
+        cardDiv.classList.add("card")
+        cardDiv.setAttribute("data-id", destination.id)
+        cardDiv.id = destination.id
+        cardDiv.innerHTML = this.makeACard()
+    }
 // Destination.all = []
 // //Contructor - HoverOver
 // function Destination(name, image){
