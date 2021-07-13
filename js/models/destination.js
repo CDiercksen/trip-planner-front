@@ -26,23 +26,23 @@ class Destination{
     makeACard =()=>{console.log(this)
         return `
         <h2 id="coolbean" data-id="${this.id}">${this.name}</h2>
-        <img src=${this.image} class="destination-icon" />
         `
+        // <img src=${this.image} class="destination-icon" />
     }
-
+//addEventListener(onClick render image, and list of restaurants)
     renderDestination =(destination)=> {
         const cardDiv = document.createElement("div")
         cardDiv.classList.add("card")
         cardDiv.setAttribute("data-id", destination.id)
         cardDiv.id = destination.id
         cardDiv.innerHTML = this.makeACard()
-
-        const collectionDiv = document.querySelector("#destination-collection")
-        collectionDiv.append(cardDiv)
+        
+        const collectionDiv = document.getElementById("BigBoy")
+        collectionDiv.appendChild(cardDiv)
     }
 // Destination.all = []
-// //Contructor - HoverOver
-// function Destination(name, image){
+//Contructor - HoverOver
+// function notDestination(name, image){
     
 //         this.name = name
 //         this.image = image
