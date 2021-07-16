@@ -11,21 +11,24 @@ class Restaurant{
 
         Restaurant.all.push(this)
     }
-    makeACard =()=>{console.log(this)
+    makeACard =()=>{
         return `
         <h2 id="coolbean" data-id="${this.id}">${this.name}</h2>
         <img src=${this.image} class="restaurant-icon" />
         `
     }
 
-    renderRestaurant =(restaurant)=> {
+    renderRestaurant =()=> {
+        console.log(this.name)
+        const bigboy = document.getElementById("BigBoy")
         const cardDiv = document.createElement("div")
         cardDiv.classList.add("card")
-        cardDiv.setAttribute("data-id", restaurant.id)
-        cardDiv.id = restaurant.id
+        cardDiv.setAttribute("data-id", this.id)
+        cardDiv.id = `restaurant-${this.name}`
+        bigboy.appendChild(cardDiv)
         cardDiv.innerHTML = this.makeACard()
 
-        const collectionDiv = document.querySelector("#restaurant-collection")
-        collectionDiv.append(cardDiv)
+        // const collectionDiv = document.getElementById("BigBoy")
+        // collectionDiv.appendChild(cardDiv)
     }
 }

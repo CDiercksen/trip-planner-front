@@ -23,7 +23,7 @@ class Destination{
 
     }
     
-    makeACard =()=>{console.log(this)
+    makeACard =()=>{console.log("make a card")
         return `
         <h2 id="coolbean" data-id="${this.id}">${this.name}</h2>
         `
@@ -39,16 +39,22 @@ class Destination{
         
         const collectionDiv = document.getElementById("BigBoy")
         collectionDiv.appendChild(cardDiv)
+
+        cardDiv.addEventListener('click', e => {
+            this.getRestaurants()
+        })
     }
-// Destination.all = []
-//Contructor - HoverOver
-// function notDestination(name, image){
-    
-//         this.name = name
-//         this.image = image
 
-//     Destination.all.push(this)
-// }
 
-// const NewYork = new Destination("New York", "https://ca.slack-edge.com/T02MD9XTF-U01CA1HPEA1-g30a7a74eced-512")
+getRestaurants =()=> {
+    const cardDiv = document.createElement("div")
+    cardDiv.classList.add("card")
+    fetch(`http://localhost:3000/destinations/${this.id}/restaurants`).then(resp=>resp.json())
+    .then(fetchedArray => { console.log(""); 
+            fetchedArray.forEach(restaurantObj => { console.log(restaurantObj)
+                const newRestaurant = new Restaurant(restaurantObj)
+                newRestaurant.renderRestaurant()
+            })
+        })
+}
 }

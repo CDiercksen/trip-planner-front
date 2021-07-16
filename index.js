@@ -29,4 +29,4 @@ document.addEventListener("DOMContentLoaded", function(){ /* */ console.log("We,
 // })
 
 API.fetchAllOurDestinations()
-API.fetchAllOurRestaurants()
+// API.fetchAllOurRestaurants()
